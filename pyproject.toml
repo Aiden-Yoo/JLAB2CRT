@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "lab2crt"
+version = "2.0.0"
+description = ""
+authors = ["Aiden Yoo"]
+license = "(C)Copyright 2022, Aiden Yoo"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = "^2.28.2"
+pyyaml = "^6.0"
+pycryptodome = "^3.17"
+rich = "^13.3.3"
+asyncssh = "^2.13.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

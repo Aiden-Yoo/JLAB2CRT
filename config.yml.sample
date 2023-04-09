@@ -1,0 +1,105 @@
+---
+#####################################################
+##   SecureCRT sessions root directory parameter   ##
+#####################################################
+#
+# SecureCRT's session data directory. Keep it blank if not changed default path.
+# Or not, putting in the changed path is required referring to the below format.
+# [Default directory by operating system]
+#  - Windows: C:\Documents and Settings\{USER_NAME}\Application Data\VanDyke\Config\Sessions
+#  - Mac    : /Users/{USER_NAME}/Library/Application Support/VanDyke/SecureCRT/Config/Sessions
+crt_path:
+
+##########################################
+##   SecureCRT session path parameter   ##
+##########################################
+#
+# Three directories will be created in the crt_path. The directory hierarchy is as follows:
+#   crt_path
+#    └top          : Top-level directory used by LAB2CRT
+#      └sub        : It's used to distinguish it from other things. Session directories will be made here.
+#        ├old      : Expired directories will be moved into this directory.
+#        ├jumphost : Directory for jumphost(VMM only)
+#        ├dirA     : Directories will be created according to the status of lab reservation when execute LAB2CRT.
+#        ├dirB
+#        ├dirC
+#        └...
+directory:
+  lrm:
+    top: JNPR
+    sub: UltraLab
+    old: old
+  vmm:
+    top: JNPR
+    sub: VMM
+    old: old
+    jumphost: jumphost
+
+#########################################
+##   Session creating mode parameter   ##
+#########################################
+#
+# Parameters for setting default behavior when entered without argument like below.
+# $ python .\lab2crt.py
+# both: Create sessions both of UltraLAB and VMM
+# lrm: Create sessions for UltraLAB only
+# vmm: Create sessions for VMM only
+mode: both
+
+##############################
+##   LRM server parameter   ##
+##############################
+#
+# lrm:
+#   username: (Optional) UltraLAB device's username. Recommended to input this value.
+#   password: (Optional) UltraLAB device's password. Recommended to input this value.
+lrm:
+  username: 
+  password: 
+
+##############################
+##   VMM server parameter   ##
+##############################
+#
+# vmm:
+#   adusername: (Optional) AD Username. If remains empty this value, get it from OS's username.
+#   adpassword: (Optional) AD Password. If remains empty this value, request to input right away when starting the program.
+#   labpassword: (Optional) JNPR LAB Password. If remains empty this value, request to input right away when starting the program.
+#   username: (Optional) VMs' username. Recommended to input this value.
+#   password: (Optional) VMs' password. Recommended to input this value.
+#   pod:
+#     hosts:
+#   jumphost:
+#     enable: (Mandatory) True or False. Need to set True if using jumphost.
+#     hosts: (Mandatory) Jumphosts' hostname.
+#   keyword:
+#     exclude: (Optional) Set the values if excluding registration VMs by certain keywords.
+vmm:
+  adusername:
+  adpassword:
+  labpassword:
+  username: 
+  password: 
+  pod:
+    hosts:
+      - aaa.lab.device
+      - bbb.lab.device
+      - ccc.lab.device
+      - ddd.lab.device
+      - eee.lab.device
+      - ...
+  jumphost:
+    enable: True
+    hosts:
+      - aaa.jumphost.device
+      - bbb.jumphost.device
+      - ccc.jumphost.device
+      - ddd.jumphost.device
+      - eee.jumphost.device
+      - ...
+  keyword:
+    exclude:
+      - spirent
+      - ixia
+      - mpc
+      - fpc
