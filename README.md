@@ -1,6 +1,6 @@
-# LAB2CRT
+# JLAB2CRT
 
-LAB2CRT is a script that makes SecureCRT sessions automatically for UltraLAB & VMM users.
+JLAB2CRT is a script that makes SecureCRT sessions automatically for UltraLAB & VMM users.
 It fetches UltraLAB information by using LRM(LAB Resource Management) Core API.
 It was made by adding LRM2CRT's feature. This addition makes automating VMM session creation.
 
@@ -20,19 +20,19 @@ This repository is for recording my work. This is for use in Juniper Networks' i
 
 ### Installation
 
-_Python 3.7+ is required to use lab2crt. If it is not installed on user environment, need to install python by referring to the official document. ([for Windows](https://docs.python.org/3/using/windows.html), [for Mac](https://docs.python.org/3/using/mac.html#))_
+_Python 3.7+ is required to use jlab2crt. If it is not installed on user environment, need to install python by referring to the official document. ([for Windows](https://docs.python.org/3/using/windows.html), [for Mac](https://docs.python.org/3/using/mac.html#))_
 
 1. Clone the repo
 
    ```sh
-   git clone https://github.com/Aiden-Yoo/LAB2CRT.git
+   git clone https://github.com/Aiden-Yoo/JLAB2CRT.git
    ```
 
    or download manually.
 
 2. Move directory
    ```sh
-   cd lab2crt
+   cd jlab2crt
    ```
 3. Install python packages
    ```sh
@@ -46,7 +46,7 @@ _Python 3.7+ is required to use lab2crt. If it is not installed on user environm
 1. Move directory
 
    ```sh
-   cd lab2crt
+   cd jlab2crt
    ```
 
 2. Edit file from `config.yml.sample` to `config.yml`
@@ -60,26 +60,26 @@ _Python 3.7+ is required to use lab2crt. If it is not installed on user environm
      ...
    ```
    Put in `crt_path` if changed default SecureCRT data path - Refer to the config.yml.sample. Please refer to the `config.yml` to get more details.
-3. Execute `lab2crt.py`
+3. Execute `jlab2crt.py`
 
    - Create sessions All of LAB system(UltraLAB, VMM).
 
    ```sh
-   python ./lab2crt.py
+   python ./jlab2crt.py
    or
-   python ./lab2crt.py -a
+   python ./jlab2crt.py -a
    ```
 
    - Create sessions for `UltraLAB` only.
 
    ```sh
-   python ./lab2crt.py -k lrm
+   python ./jlab2crt.py -k lrm
    ```
 
    - Create sessions for `VMM` only.
 
    ```sh
-   python ./lab2crt.py -k vmm
+   python ./jlab2crt.py -k vmm
    ```
 
 4. Check created sessions in the SecureCRT
