@@ -112,6 +112,6 @@ _Python 3.7+ is required to use jlab2crt. If it is not installed on user environ
 
 Aiden Yoo - you1367@gmail.com
 
-Project Link: [https://github.com/Aiden-Yoo/LAB2CRT](https://github.com/Aiden-Yoo/LAB2CRT)
+Project Link: [https://github.com/Aiden-Yoo/LAB2CRT](https://github.com/Aiden-Yoo/JLAB2CRT)
 
-<p align="right">(<a href="#lab2crt">back to top</a>)</p>
+<p align="right">(<a href="#jlab2crt">back to top</a>)</p>
