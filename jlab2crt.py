@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*-coding:utf-8 -*-
 """
-@File    :   lab2crt.py
+@File    :   jlab2crt.py
 @Time    :   2023/04/09 03:36:36
 @Author  :   Aiden Yoo
 @Version :   2.0.0
@@ -70,7 +70,7 @@ def check_dir(config, kind):
 
 def help():
     print("Usage:")
-    print("    python ./lab2crt.py [-a | -k <lrm|vmm>]")
+    print("    python ./jlab2crt.py [-a | -k <lrm|vmm>]")
     print("")
     print("    [-a]                   Create sessions from all kinds of lab(LRM/VMM).")
     print("                           This parameter applied by default.")
